@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #43f7f7, #004080);
+    color: white;
+  }
+  
+  .container {
+    max-width: 420px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    animation: pop 0.8s ease;
+  }
+  
+  @keyframes pop {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  select, input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+  }
+  
+  button {
+    background: #ffeb3b;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #efe057;
+  }
+  
+  /* STICKMAN */
+  /* HANGMAN CONTAINER */
+#hangman {
+    position: relative;
+    width: 220px;
+    height: 280px;
+    margin: 20px auto;
+  }
+  
+  /* GALLOWS */
+  .gallows {
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    width: 120px;
+    height: 220px;
+    border-left: 6px solid #fff;
+    border-top: 6px solid #fff;
+  }
+  
+  /* ROPE */
+  .rope {
+    position: absolute;
+    width: 4px;
+    height: 30px;
+    background: #fff;
+    top: 0;
+    left: 86px;
+  }
+  
+  /* HEAD */
+  .head {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    top: 42px;
+    left: 100px;
+  }
+  
+  /* BODY */
+  .body {
+    position: absolute;
+    width: 4px;
+    height: 70px;
+    background: #fff;
+    top: 86px;
+    left: 121px;
+  }
+  
+  /* ARMS */
+  .arm {
+    position: absolute;
+    width: 45px;
+    height: 4px;
+    background: #fff;
+    top: 100px;
+  }
+  
+  .arm.left {
+    left: 81px;
+    transform: rotate(-30deg);
+  }
+  
+  .arm.right {
+    left: 118px;
+    transform: rotate(30deg);
+  }
+  
+/* LEGS */
+.leg {
+    position: absolute;
+    width: 45px;
+    height: 4px;
+    background: #fff;
+    top: 152px;
+    left: 123px; 
+    transform-origin: left center;
+  }
+  
+  .leg.left {
+    transform: rotate(35deg);
+  }
+  
+  .leg.right {
+    transform: rotate(145deg);
+  }
+  
+  /* HIDDEN PARTS */
+  .hidden {
+    opacity: 0;
+  }
+  
+  /* SMOOTH APPEAR */
+  .head, .body, .arm, .leg {
+    transition: opacity 0.4s ease;
+  }   
+  
+  @keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* WORD */
+  #word {
+    font-size: 28px;
+    letter-spacing: 6px;
+    margin: 10px 0;
+  }
+
+  #score, #attempts {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  #letter {
+    width: 150px;
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  button {
+    margin-top: 5px;
+  }  
+  
+  /* MOBILE */
+  @media (max-width: 600px) {
+    .container {
+      width: 90%;
+    }
+    .letter {
+      font-size: 24px;
+    }
+  }
+
+  #word {
+    display: flex;
+    flex-wrap: wrap;         
+    justify-content: center;
+    gap: 20px;               
+    margin: 15px 0;
+  }
+  
+  .word {
+    display: flex;
+    gap: 6px;                
+    white-space: nowrap;     
+  }
+  
+  .letter {
+    font-size: 28px;
+  }
+  
+  
+  
+  
+  

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hangman Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#764ba2">
+</head>
+<body>
+
+<div class="container">
+  <h1>🎮 Hangman Game</h1>
+
+  <!-- CATEGORY -->
+  <select id="category">
+    <option value="Animals">Animals</option>
+    <option value="Movies">Movies</option>s</option>
+    <option value="Countries">Countries</option>
+  </select>
+
+  <!-- DIFFICULTY -->
+  <select id="difficulty">
+    <option value="Easy">Easy</option>
+    <option value="Medium">Medium</option>
+    <option value="Hard">Hard</option>
+  </select>
+
+  <button onclick="startGame()">Start Game</button>
+
+  <!-- STICKMAN -->
+  <div id="hangman">
+    <div class="gallows">
+        <div class="rope"></div>
+    </div>
+    <div class="head hidden"></div>
+    <div class="body hidden"></div>
+    <div class="arm left hidden"></div>
+    <div class="arm right hidden"></div>
+    <div class="leg left hidden"></div>
+    <div class="leg right hidden"></div>
+  </div>  
+
+  <!-- WORD -->
+  <div id="word">_ _ _ _</div>
+
+  <!-- INPUT -->
+  <input type="text" id="letter" maxlength="1" placeholder="Enter letter">
+  <button id="guessBtn" onclick="guess()">Guess</button>
+
+  <!-- SCORE -->
+  <p id="score">Score: 0</p>
+  <p id="attempts">Attempts left: </p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
