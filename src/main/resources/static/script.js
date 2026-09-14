@@ -101,7 +101,7 @@ function update(data) {
     document.getElementById("guessBtn").disabled = true;
   }
 
-} // <-- update() ends here
+} 
 
 function updateStickman(wrong) {
   const parts = document.querySelectorAll(
